@@ -1,0 +1,31 @@
+.fullElement {
+  /* text-align: center; */
+  font-family: "Courier";
+  /* padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 5px; */
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.successfulMessage {
+  color: rgb(0, 172, 0);
+}
+.unsuccessfulMessage {
+  color: red;
+}
+
+@media (max-width: 1145px) {
+  .fullElement {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+  }
+}

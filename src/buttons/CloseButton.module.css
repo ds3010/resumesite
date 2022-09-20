@@ -1,0 +1,9 @@
+.closeButton {
+  float: right;
+  margin: 5%;
+}
+
+.closeButtonDiv {
+  display: inline-block;
+  width: 100%;
+}
