@@ -1,15 +1,25 @@
 .fullElement {
-  opacity: 0.7;
+  /* opacity: 0.7; */
   width: 200px;
   margin: 20px;
   height: 95%;
-  background-color: rgb(22, 21, 21);
-  opacity: 0.7;
-  font-family: Courier;
-  color: rgb(186, 186, 186);
+  background-color: rgb(138, 136, 136);
+  font-family: 'Open Sans';
+  /* color: rgb(186, 186, 186); */
   border-radius: 10px;
+  box-shadow: 5px 5px #000000;
   text-align: left;
   display: inline-block;
+}
+
+input {
+  border-radius: 5px;
+  font-family: Courier;
+  border: none;
+}
+textarea {
+  border-radius: 5px;
+  font-family: Courier;
 }
 
 /* h2 {
@@ -20,7 +30,7 @@
 } */
 
 .menu {
-  color: white;
+  color: rgb(50, 50, 50);
   text-align: left;
   padding: 10px;
   position: relative;
@@ -38,12 +48,12 @@
     to bottom,
     white,
     white 20%,
-    rgb(22, 21, 21),
-    rgb(22, 21, 21),
+    rgb(50, 50, 50),
+    rgb(50, 50, 50),
     white 40%,
     white 60%,
-    rgb(22, 21, 21),
-    rgb(22, 21, 21),
+    rgb(50, 50, 50),
+    rgb(50, 50, 50),
     white 80%,
     white 100%
   );
@@ -51,14 +61,14 @@
 
 .smartDeviceMenu {
   /* display: none; */
-  background-color: rgb(22, 21, 21);
+  background-color: rgb(138, 136, 136);
   opacity: 1;
-  font-family: Courier;
-  color: rgb(186, 186, 186);
+  font-family: 'Open Sans';
+  color:white;
   z-index: 9;
 }
 .name {
-  border: 1px solid rgb(186, 186, 186);
+  /* border: 1px solid rgb(186, 186, 186); */
   display: inline-block;
   text-align: center;
   font-style: italic;
@@ -66,7 +76,6 @@
   /* line-height: 1em; */
   /* margin-bottom: 5%; */
   /* vertical-align: top; */
-  border-radius: 10px;
   padding: 0;
 }
 
@@ -88,6 +97,7 @@
     margin: 0;
     opacity: 1;
     border-radius: 0px;
+    box-shadow: none;
   }
 
   .menu {
@@ -122,7 +132,7 @@
   .smartDeviceMenu {
     display: block;
     width: 100%;
-    top: 50px;
+    top: 60px;
     position: absolute;
   }
 }

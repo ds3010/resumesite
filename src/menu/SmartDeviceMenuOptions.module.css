@@ -8,16 +8,17 @@
     width: 100%;
   }
   .option :hover {
-    color: white;
+    color: rgb(50,50,50);
     cursor: pointer;
   }
 
   .option h4 {
     font-family: Courier;
-    color: rgb(186, 186, 186);
-    border-bottom-width: 5px;
+    color: white;
+    cursor: pointer;
+    /* border-bottom-width: 5px;
     border-bottom-style: groove;
-    border-bottom-color: rgb(186, 186, 186);
+    border-bottom-color: rgb(186, 186, 186); */
     margin-left: 2%;
     margin-right: 2%;
   }
