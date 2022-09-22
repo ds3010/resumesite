@@ -1,29 +1,29 @@
 .fullElement {
-  background-color: rgb(138, 136, 136);
+  background-color: white;
   opacity: 1;
   display: inline-block;
   width: 75%;
   min-width: 100px;
   height: 95%;
   vertical-align: top;
-  margin: 20px;
+  margin: 10px;
   font-family: Courier;
-  color: white;
+  /* color: white; */
   border-radius: 10px;
   text-align: justify;
   overflow: auto;
   font-size: large;
-  box-shadow: 5px 5px #000000;
+  /* box-shadow: 5px 5px #000000; */
 }
 .pageTitle {
   font-family: Courier;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-left: 10%;
   margin-right: 10%;
   text-align: center;
 }
 .itemDiv {
-  color: white;
+  color: black;
   padding-left: 50px;
   padding-right: 20px;
   padding-bottom: 5px;
@@ -34,13 +34,13 @@
 }
 .itemDivLi {
   font-family: Courier;
-  color: white;
+  color: black;
   list-style-type: none;
   text-align: center;
 }
 .itemDivLiSecond {
   font-family: Courier;
-  color: white;
+  color: black;
   list-style-type: none;
   text-align: justify;
 }
@@ -53,8 +53,8 @@
 }
 .itemDivLiUlLi {
   font-family: Courier;
-  color: white;
-  list-style-type: circle;
+  color: black;
+  list-style-type:square;
   text-align: justify;
 }
 .image {
@@ -92,16 +92,17 @@
 @media (max-width: 1145px) {
   .fullElement {
     margin-top: 80px;
-    margin-left: 5%;
-    margin-right: 2%;
+    margin-left: 2px;
+    /* margin-right: 1%; */
     margin-bottom: 5%;
-    width: 90%;
+    width: 95%;
     overflow: auto;
     font-size: small;
   }
-  /* .itemDiv {
-
-  } */
+  .itemDiv {
+    padding-left: 20px;
+    padding-right: 10px;
+  }
 
   .itemDivLiUlLi {
     text-align: left;
@@ -125,7 +126,7 @@
   .headerBox .itemHeaderWithImage {
     /* float: left; */
     display: inline-block;
-    width: 50%;
+    width: 70%;
     vertical-align: middle;
     /* margin-left: 5px; */
     /* padding-left: 0; */
@@ -135,5 +136,6 @@
   .headerBox .itemDivLiSecond {
     text-align: left;
     height: inherit;
+    /* width: 140%; */
   }
 }

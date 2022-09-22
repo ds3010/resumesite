@@ -8,39 +8,43 @@ function App() {
 
   const options = [
     {
-      title: "Intro",
+      title: "Who am I",
       id: 1,
       items: [
         {
           description:
-            "Bilingual Front-End Developer and Computer Networking Engineer (Spanish, English)",
+            "Bilingual Front-End Developer and Network Engineer (Spanish, English)",
         },
         {
-          description: "Cisco Certified: CCNA and CCNP Enterprise",
-        },
-        {
-          description:
-            "Proficient in configuring, maintaining, troubleshooting and upgrading different network topologies",
+          description: "Experience configuring and deploying websites using HTML, CSS, Javascript, React JS and TypeScript",
         },
         {
           description:
-            "Experience in leading/developing projects where responsibilities included but were not limited to reviewing current state architecture and upgrading to future state, network architecture review",
+            "Experienced in Python scripting for task automation",
         },
         {
           description:
-            "Experienced in Python and PowerShell scripting, Netconf, Restconf, Rest API and Ansible",
+            "Cisco Certified: CCNA and CCNP Enterprise.",
         },
         {
           description:
-            "Providing highly technical customer service while ensuring the correct functionality of IT solutions and customer’s satisfaction",
+            "Proficient in configuring, maintaining, troubleshooting, and upgrading different network topologies",
         },
         {
           description:
-            "Proficient in the SD-WAN market, its features and functionality",
+            "Proficient using third party Rest API’s and SDKs for integration",
         },
         {
           description:
-            "Experienced in virtual environments such as vSphere, Hyper-V, KVM and Citrix",
+            "Providing highly technical customer service while ensuring customer’s satisfaction",
+        },
+        {
+          description:
+            "Great technical problems solver",
+        },
+        {
+          description:
+            "Experience coding mobile applications in Android Studio and XCode",
         },
       ],
     },
@@ -113,6 +117,21 @@ function App() {
       title: "Work Experience",
       id: 3,
       items: [
+        {
+          description: "Inpixon",
+          location: "Toronto,ON",
+          duration: "Sept 2020- Present",
+          role: "Customer Success Engineer/Implementation",
+          duties: [
+            "Responsible for assisting new customers into implementing our solution (Rest APIs and SDKs)",
+            "Provided new customers with code examples using our Web SDK (Javascript and React) and also our Android SDK (Java, Kotlin) and iOS SDK (Swift)",
+            "Replicated issues SDK issues successfully before raising SDK bugs to our engineering department",
+            "Answered technical questions to partners and customers regarding network and coding issues they may have",
+            "Assisted the pre-sales department to vet new customers and ensure their use cases were feasible",
+            "Created different python automation scripts to increase the speed in which we deployed configuration changes",
+            "Led new members of the team so they could adapt faster into the work environment",
+          ],
+        },
         {
           description: "Adaptiv Networks",
           location: "Mississauga,ON",
