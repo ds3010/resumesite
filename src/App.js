@@ -8,7 +8,7 @@ function App() {
 
   const options = [
     {
-      title: "Who am I",
+      title: "Summary",
       id: 1,
       items: [
         {

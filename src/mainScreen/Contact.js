@@ -19,10 +19,10 @@ const Contact = () => {
       subjectRef.current.value === "" ||
       messageRef.current.value === ""
     ) {
-      console.log(nameRef.current.value);
-      console.log(emailRef.current.value);
-      console.log(subjectRef.current.value);
-      console.log(messageRef.current.value);
+      // console.log(nameRef.current.value);
+      // console.log(emailRef.current.value);
+      // console.log(subjectRef.current.value);
+      // console.log(messageRef.current.value);
       setMessage(
         "Message not sent, please make sure all fields above are filled out correctly"
       );
