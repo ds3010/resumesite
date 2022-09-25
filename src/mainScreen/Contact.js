@@ -27,6 +27,7 @@ const Contact = () => {
         "Message not sent, please make sure all fields above are filled out correctly"
       );
     } else {
+      setMessage("Sending message...")
       emailjs
         .sendForm(
           "service_cy06yzi",
