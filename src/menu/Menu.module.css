@@ -12,15 +12,7 @@
   display: inline-block;
 }
 
-input {
-  border-radius: 5px;
-  font-family: Courier;
-  border: none;
-}
-textarea {
-  border-radius: 5px;
-  font-family: Courier;
-}
+
 
 /* h2 {
   text-align: top;
