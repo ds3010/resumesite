@@ -227,20 +227,35 @@ function App() {
   const optionShown = options.filter((option) => option.id === optionState);
   //console.log(optionShown);
 
+  // return (
+  //   // <div className={classes.menuDiv}>
+  //   <div>
+  //     {/* <div> */}
+  //     <Menu
+  //       // className={classes.menu}
+  //       options={options}
+  //       optionSelected={showOption}
+  //       optionDisplayed={optionState}
+  //     ></Menu>
+  //     {/* <MainScreen
+  //       className={classes.mainScreen}
+  //       option={optionShown}
+  //     ></MainScreen> */}
+  //   </div>
+  // );
   return (
-    <div className={classes.menuDiv}>
-      {/* <div> */}
+    <>
       <Menu
-        className={classes.menu}
         options={options}
         optionSelected={showOption}
         optionDisplayed={optionState}
       ></Menu>
-      <MainScreen
-        className={classes.mainScreen}
-        option={optionShown}
+     <MainScreen
+         className={classes.mainScreen}
+         option={optionShown}
       ></MainScreen>
-    </div>
+    </>
+
   );
 }
 

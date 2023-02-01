@@ -1,4 +1,4 @@
-import classes from "./MenuOptions.module.css";
+//import classes from "./MenuOptions.module.css";
 
 const MenuOptions = (props) => {
   const onClicked = () => {
@@ -6,9 +6,9 @@ const MenuOptions = (props) => {
   };
   return (
     // <div>
-    <div className={classes.option}>
-      <h4 onClick={onClicked}>{props.title}</h4>
-    </div>
+    <li className="nav-item">
+      <a className="nav-link"  data-toggle="collapse" data-target=".navbar-collapse.show" href="#" onClick={onClicked}>{props.title}</a>
+    </li>
   );
 };
 
