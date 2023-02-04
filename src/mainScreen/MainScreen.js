@@ -82,10 +82,10 @@ const MainScreen = (props) => {
       //   </div>
       // );
       return (
-        <div className="container mb-2">
+        <div className="container mb-2 mt-2">
           <div className="card" key={index}>
             <div className="card-body p-0" >
-              <h5 className="card-header bg-light text-center">{description}</h5>
+              <h5 className="card-header bg-dark text-white text-center">{description}</h5>
               {(duration || location || role || areThereImages) && <div>
                 <div className="d-inline-block">
                   {areThereImages && (
