@@ -1,4 +1,4 @@
-import classes from "./App.module.css";
+// import classes from "./App.module.css";
 import Menu from "./menu/Menu";
 import { useState } from "react";
 import MainScreen from "./mainScreen/MainScreen";
@@ -250,10 +250,9 @@ function App() {
         optionSelected={showOption}
         optionDisplayed={optionState}
       ></Menu>
-     <MainScreen
-         className={classes.mainScreen}
-         option={optionShown}
-      ></MainScreen>
+        <MainScreen
+            option={optionShown}
+          ></MainScreen>
     </>
 
   );
