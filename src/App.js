@@ -16,15 +16,14 @@ function App() {
             "Bilingual Front-End Developer and Network Engineer (Spanish, English)",
         },
         {
-          description: "Experience configuring and deploying websites using HTML, CSS, Javascript, React JS and TypeScript",
+          description:
+            "Experience configuring and deploying websites using HTML, CSS, Javascript, React JS and TypeScript",
         },
         {
-          description:
-            "Experienced in Python scripting for task automation",
+          description: "Experienced in Python scripting for task automation",
         },
         {
-          description:
-            "Cisco Certified: CCNA and CCNP Enterprise.",
+          description: "Cisco Certified: CCNA and CCNP Enterprise.",
         },
         {
           description:
@@ -39,8 +38,7 @@ function App() {
             "Providing highly technical customer service while ensuring customer’s satisfaction",
         },
         {
-          description:
-            "Great technical problems solver",
+          description: "Great technical problems solver",
         },
         {
           description:
@@ -250,11 +248,8 @@ function App() {
         optionSelected={showOption}
         optionDisplayed={optionState}
       ></Menu>
-        <MainScreen
-            option={optionShown}
-          ></MainScreen>
+      <MainScreen option={optionShown}></MainScreen>
     </>
-
   );
 }
 

@@ -20,7 +20,60 @@ const MainScreen = (props) => {
   let areThereDuties = false;
   let areThereImages = false;
 
-  if (props.option[0].items) {
+  if (props.option[0].id === 1) {
+    const intContent = props.option[0].items.map((item, index) => {
+      return (
+        // <div key={index} className="container">
+        //   <li
+        //     className="text-left justify-content-left font-weight-normal"
+        //     style={{ justifyContent: "left", fontSize: "20px" }}
+        //   >
+        //     {item.description}
+        //   </li>
+        // </div>
+        <li key={index} className="list-group-item">
+          <h5 className="font-weight-normal">{item.description}</h5>
+        </li>
+      );
+    });
+    content = (
+      <div className="container mt-3">
+        <ul className="list-group list-group-flush mb-5">{intContent}</ul>
+      </div>
+    );
+  } else if (props.option[0].id === 5) {
+    content = <Contact></Contact>;
+  } else if (props.option[0].id === 4) {
+    const intContent = props.option[0].items.map((item, index) => {
+      return (
+        <div className="col-lg d-inline-block mt-3 w-25 " key={index}>
+          <div className="card h-100">
+            <div className="card-body p-0 h-100">
+              <h5 className="card-header bg-light text-dark text-center">
+                {item.description}
+              </h5>
+              {item.imageUrl && (
+                <div className="d-flex justify-content-center">
+                  <img
+                    src={item.imageUrl}
+                    className="card-image-top rounded d-block"
+                    style={{ width: "5rem" }}
+                    alt=""
+                  ></img>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    });
+    content = (
+      <div className="container mb-2 mt-2">
+        {/* <div className="card-columns">{intContent}</div> */}
+        {intContent}
+      </div>
+    );
+  } else if (props.option[0].items) {
     content = props.option[0].items.map((item, index) => {
       description = item.description;
 
@@ -82,50 +135,74 @@ const MainScreen = (props) => {
       //   </div>
       // );
       return (
-        <div className="container mb-2 mt-2">
-          <div className="card" key={index}>
-            <div className="card-body p-0" >
-              <h5 className="card-header bg-dark text-white text-center">{description}</h5>
-              {(duration || location || role || areThereImages) && <div>
-                <div className="d-inline-block">
-                  {areThereImages && (
-                      <img src={item.imageUrl} className="card-image-top img-fluid align-middle" style={{width: "5rem"}} alt="">
-                      </img>
-                  )}
+        <div className="container mb-2 mt-2" key={index}>
+          <div className="card">
+            <div className="card-body p-0">
+              <h5 className="card-header bg-dark text-white text-center">
+                {description}
+              </h5>
+              {(duration || location || role || areThereImages) && (
+                <div>
+                  <div className="d-inline-block">
+                    {areThereImages && (
+                      <img
+                        src={item.imageUrl}
+                        className="card-image-top img-fluid align-middle"
+                        style={{ width: "5rem" }}
+                        alt=""
+                      ></img>
+                    )}
+                  </div>
+                  <div className="d-inline-block align-middle">
+                    <ul className="list-group">
+                      {duration !== "" && (
+                        <li className="list-group-item border-0">
+                          <span className="font-weight-bold ">Duration: </span>
+                          {duration}
+                        </li>
+                      )}
+                      {location !== "" && (
+                        <li className="list-group-item border-0">
+                          <span className="font-weight-bold">Location: </span>
+                          {location}
+                        </li>
+                      )}
+                      {role !== "" && (
+                        <li className="list-group-item border-0">
+                          <span className="font-weight-bold">Role: </span>
+                          {role}
+                        </li>
+                      )}
+                    </ul>
+                  </div>
                 </div>
-                <div className="d-inline-block align-middle">
-                  <ul class="list-group"> 
-                    {duration !== "" && <li class="list-group-item border-0"><span class="font-weight-bold ">Duration: </span>{duration}</li>}
-                    {location !== "" && <li class="list-group-item border-0"><span class="font-weight-bold">Location: </span>{location}</li>}
-                    {role !== "" && <li class="list-group-item border-0"><span class="font-weight-bold">Role: </span>{role}</li>}
-                  </ul>
-                </div>
-              </div>}
-            
-            {item.duties && (
-              <ul class="list-group ml-5">
-                {item.duties.map((duty, index) => {
-                  return (
-                    <li class="list-group-item border-0 p-0 m-0" key={index}>
-                      {duty}
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
+              )}
+
+              {item.duties && (
+                <ul className="list-group ml-5">
+                  {item.duties.map((duty, index) => {
+                    return (
+                      <li
+                        className="list-group-item border-0 p-0 m-0"
+                        key={index}
+                      >
+                        {duty}
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
             </div>
           </div>
         </div>
       );
     });
     // console.log(content);
-  } else if (props.option[0].id === 5) {
-    content = <Contact></Contact>;
   }
   // }, [props.option[0]]);
 
   return (
-    <div style={{height: "100%", overflow: "scroll"}}>
+    <div style={{ height: "100%", overflow: "scroll" }}>
       <h1 className="text-center">{props.option[0].title}</h1>
       {content}
     </div>
