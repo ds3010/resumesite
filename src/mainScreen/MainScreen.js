@@ -46,18 +46,19 @@ const MainScreen = (props) => {
   } else if (props.option[0].id === 4) {
     const intContent = props.option[0].items.map((item, index) => {
       return (
-        <div className="col-lg d-inline-block mt-3 w-25 " key={index}>
+        <div className="col-sm-6 col-lg-4 mb-4" key={index}>
+          {/* <div className="col-lg d-inline-block mt-3 w-25 " key={index}> */}
           <div className="card h-100">
-            <div className="card-body p-0 h-100">
+            <div className="card-body">
               <h5 className="card-header bg-light text-dark text-center">
                 {item.description}
               </h5>
               {item.imageUrl && (
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center pt-3">
                   <img
                     src={item.imageUrl}
                     className="card-image-top rounded d-block"
-                    style={{ width: "5rem" }}
+                    style={{ width: "4rem" }}
                     alt=""
                   ></img>
                 </div>
@@ -68,9 +69,11 @@ const MainScreen = (props) => {
       );
     });
     content = (
-      <div className="container mb-2 mt-2">
-        {/* <div className="card-columns">{intContent}</div> */}
-        {intContent}
+      <div className="container content-row">
+        <div className="row">
+          {/* <div className="card-columns">{intContent}</div> */}
+          {intContent}
+        </div>
       </div>
     );
   } else if (props.option[0].items) {
