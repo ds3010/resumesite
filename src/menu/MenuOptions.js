@@ -7,7 +7,15 @@ const MenuOptions = (props) => {
   return (
     // <div>
     <li className="nav-item">
-      <a className="nav-link"  data-toggle="collapse" data-target=".navbar-collapse.show" href="#" onClick={onClicked}>{props.title}</a>
+      <a
+        className="nav-link"
+        data-toggle="collapse"
+        data-target=".navbar-collapse.show"
+        href="#"
+        onClick={onClicked}
+      >
+        {props.title}
+      </a>
     </li>
   );
 };

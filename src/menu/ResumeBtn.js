@@ -24,9 +24,9 @@ const ResumBtn = () => {
   };
 
   return (
-    
-      <button className="btn btn-dark btn-outline-light" onClick={download}>Download Resume</button>
-    
+    <button className="btn btn-dark btn-outline-light" onClick={download}>
+      Download Resume
+    </button>
   );
 };
 

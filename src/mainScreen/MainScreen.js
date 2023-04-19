@@ -1,4 +1,4 @@
-import classes from "./MainScreen.module.css";
+// import classes from "./MainScreen.module.css";
 import Contact from "./Contact";
 // import { useState, useEffect } from "react";
 
@@ -49,16 +49,16 @@ const MainScreen = (props) => {
         <div className="col-sm-6 col-lg-4 mb-4" key={index}>
           {/* <div className="col-lg d-inline-block mt-3 w-25 " key={index}> */}
           <div className="card h-100">
-            <div className="card-body">
+            <div className="card-body p-0">
               <h5 className="card-header bg-light text-dark text-center">
                 {item.description}
               </h5>
               {item.imageUrl && (
-                <div className="d-flex justify-content-center pt-3">
+                <div className="d-flex justify-content-center pt-2">
                   <img
                     src={item.imageUrl}
-                    className="card-image-top rounded d-block"
-                    style={{ width: "4rem" }}
+                    className="img-fluid width-auto pb-2"
+                    style={{ maxHeight: "4rem" }}
                     alt=""
                   ></img>
                 </div>
@@ -141,7 +141,7 @@ const MainScreen = (props) => {
         <div className="container mb-2 mt-2" key={index}>
           <div className="card">
             <div className="card-body p-0">
-              <h5 className="card-header bg-dark text-white text-center">
+              <h5 className="card-header bg-light text-dark text-center">
                 {description}
               </h5>
               {(duration || location || role || areThereImages) && (

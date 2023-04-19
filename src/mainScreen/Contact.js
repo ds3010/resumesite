@@ -12,7 +12,6 @@ const Contact = () => {
 
   function sendEmail(e) {
     e.preventDefault();
-
     if (
       nameRef.current.value === "" ||
       emailRef.current.value === "" ||
@@ -27,7 +26,7 @@ const Contact = () => {
         "Message not sent, please make sure all fields above are filled out correctly"
       );
     } else {
-      setMessage("Sending message...")
+      setMessage("Sending message...");
       emailjs
         .sendForm(
           "service_cy06yzi",
@@ -59,48 +58,48 @@ const Contact = () => {
 
   return (
     <>
-      <div className={classes.fullElement}>
+      <div className="d-flex justify-content-center">
         <form onSubmit={sendEmail}>
-          <div>
+          <div className="form-group">
             <input
               ref={nameRef}
               type="text"
               placeholder="Name"
               name="name"
+              className="form-control"
             ></input>
           </div>
-          <div>
+          <div className="form-group">
             <input
               ref={emailRef}
               type="email"
               placeholder="Email Address"
               name="email"
+              className="form-control"
             ></input>
           </div>
-          <div>
+          <div className="form-group">
             <input
               ref={subjectRef}
               type="text"
               placeholder="Subject"
               name="subject"
+              className="form-control"
             ></input>
           </div>
-          <div>
+          <div className="form-group">
             <textarea
               ref={messageRef}
+              class="form-control"
               placeholder="Your message"
               name="message"
-              cols="40"
-              rows="20"
+              rows="10"
+              cols="30"
             ></textarea>
           </div>
-          <div>
-            <input
-              type="submit"
-              placeholder="Name"
-              value="Send Message"
-            ></input>
-          </div>
+          <button class="btn btn-primary btn-block" type="submit">
+            Submit
+          </button>
         </form>
       </div>
       <p className={messageClass}>{message}</p>

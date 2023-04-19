@@ -21,41 +21,46 @@ const Menu = (props) => {
 
   //console.log(props.optionDisplayed);
   return (
-    <nav className="navbar navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
       {/* <div className="container"> */}
-        <div className="container ml-0 mr-0" style={{maxWidth: "100%"}}>
-          <a className="navbar-brand" href="#">
-            Daniel Seijas
-          </a>
-          <ResumeBtn></ResumeBtn>
-          <button
-            className="navbar-toggler"
-            data-toggle="collapse"
-            data-target="#navbarNav">
-              <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="navbar-collapse collapse text-right" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
-              {props.options.map((option) => {
-                return (
-                  <MenuOptions
-                    title={option.title}
-                    key={option.id}
-                    id={option.id}
-                    onSelected={optionSelected}
-                  ></MenuOptions>
-                );
-              })}
-            </ul>
-          </div>
-          
-          {/* <div className={classes.hamburgerDiv}>
+      <div
+        className="d-flex container ml-0 mr-0 p-2 justify-content-between"
+        style={{ maxWidth: "100%" }}
+      >
+        <a className="navbar-brand" href="#">
+          Daniel Seijas
+        </a>
+        <ResumeBtn></ResumeBtn>
+        <button
+          className="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="navbar-collapse collapse text-center" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            {props.options.map((option) => {
+              return (
+                <MenuOptions
+                  title={option.title}
+                  key={option.id}
+                  id={option.id}
+                  onSelected={optionSelected}
+                ></MenuOptions>
+              );
+            })}
+          </ul>
+        </div>
+
+        {/* <div className={classes.hamburgerDiv}>
             <button
               className={classes.hamburger}
               onClick={displayMenuOptions}
             ></button>
           </div> */}
-        </div>
+      </div>
       {/* </div> */}
       {/* {smartDeviceMenuDisplay && (
         <div className={classes.smartDeviceMenu}>
