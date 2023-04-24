@@ -6,7 +6,7 @@ const ResumBtn = () => {
   const download = (e) => {
     e.preventDefault();
     Axios({
-      url: "https://dsengineerresume.herokuapp.com/",
+      url: "https://us-central1-dsfrontdev.cloudfunctions.net/download",
       method: "GET",
       responseType: "blob",
     })
