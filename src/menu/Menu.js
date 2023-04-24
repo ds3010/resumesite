@@ -30,7 +30,6 @@ const Menu = (props) => {
         <a className="navbar-brand" href="#">
           Daniel Seijas
         </a>
-        <ResumeBtn></ResumeBtn>
         <button
           className="navbar-toggler"
           data-toggle="collapse"
@@ -51,6 +50,9 @@ const Menu = (props) => {
                 ></MenuOptions>
               );
             })}
+            <li className="nav-item">
+              <ResumeBtn></ResumeBtn>
+            </li>
           </ul>
         </div>
 

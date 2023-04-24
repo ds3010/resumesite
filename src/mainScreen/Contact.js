@@ -8,6 +8,8 @@ const Contact = () => {
   const subjectRef = useRef();
   const messageRef = useRef();
 
+  //console.log(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID,process.env.REACT_APP_API_KEY)
+
   const [message, setMessage] = useState("");
 
   function sendEmail(e) {
@@ -29,10 +31,10 @@ const Contact = () => {
       setMessage("Sending message...");
       emailjs
         .sendForm(
-          "service_cy06yzi",
-          "template_fcdw21x",
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
           e.target,
-          "mDbXf0TtpYl_kESzU"
+          process.env.REACT_APP_API_KEY
         )
         .then(
           (result) => {
@@ -90,14 +92,14 @@ const Contact = () => {
           <div className="form-group">
             <textarea
               ref={messageRef}
-              class="form-control"
+              className="form-control"
               placeholder="Your message"
               name="message"
               rows="10"
-              cols="30"
+              cols="35"
             ></textarea>
           </div>
-          <button class="btn btn-primary btn-block" type="submit">
+          <button className="btn btn-primary btn-block" type="submit">
             Submit
           </button>
         </form>
