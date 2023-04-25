@@ -1,0 +1,15 @@
+/* #edImage {
+  width: 5rem !important;
+} */
+
+
+@media (max-width: 767px) {
+  #edImage {
+    /* display: block !important; */
+    display: flex !important;
+    justify-content: center;
+  }
+  /* #edDetails {
+    width: 85% !important;
+  } */
+}

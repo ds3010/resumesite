@@ -3,3 +3,4 @@ build
 .env
 .firebaserc
 fireabase.json
+.firebase

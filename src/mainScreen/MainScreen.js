@@ -1,4 +1,4 @@
-// import classes from "./MainScreen.module.css";
+import"./MainScreen.css";
 import Contact from "./Contact";
 // import { useState, useEffect } from "react";
 
@@ -146,9 +146,10 @@ const MainScreen = (props) => {
               </h5>
               {(duration || location || role || areThereImages) && (
                 <div>
-                  <div className="d-inline-block">
+                  <div id="edImage" className="d-inline-block">
                     {areThereImages && (
-                      <img
+                      <img 
+                        // id="edImage" 
                         src={item.imageUrl}
                         className="card-image-top img-fluid align-middle"
                         style={{ width: "5rem" }}
@@ -156,7 +157,7 @@ const MainScreen = (props) => {
                       ></img>
                     )}
                   </div>
-                  <div className="d-inline-block align-middle">
+                  <div id="edDetails" className="d-inline-block align-middle">
                     <ul className="list-group">
                       {duration !== "" && (
                         <li className="list-group-item border-0">
