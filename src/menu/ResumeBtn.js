@@ -24,7 +24,7 @@ const ResumBtn = () => {
   };
 
   return (
-    <button className="btn btn-dark btn-outline-light" onClick={download}>
+    <button className="btn btn-dark btn-outline-light"  style={{ fontFamily: 'Montserrat'}} onClick={download}>
       Download Resume
     </button>
   );

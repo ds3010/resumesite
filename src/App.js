@@ -8,7 +8,8 @@ function App() {
 
   const options = [
     {
-      title: "Summary",
+      title: "About Me",
+      titleImage: "images/face.jpg",
       id: 1,
       items: [
         {
@@ -17,13 +18,13 @@ function App() {
         },
         {
           description:
-            "Experience configuring and deploying websites using HTML, CSS, Javascript, React JS and TypeScript",
+            "Experienced configuring and deploying websites using React JS (HTML, CSS, Bootstrap, JavaScript and Typescript)",
         },
         {
           description: "Experienced in Python scripting for task automation",
         },
         {
-          description: "Cisco Certified: CCNA and CCNP Enterprise.",
+          description: "Cisco Certified: CCNA and CCNP Enterprise",
         },
         {
           description:
@@ -31,18 +32,26 @@ function App() {
         },
         {
           description:
-            "Proficient using third party Rest API’s and SDKs for integration",
+            "Expert using Rest APIs with Postman and CURL",
         },
         {
           description:
-            "Providing highly technical customer service while ensuring customer’s satisfaction",
+            "Fast learner with the ability to quickly pick up and integrate third-party SDKs into projects",
+        },
+        {
+          description:
+            "Providing highly technical customer service while ensuring customer's satisfaction",
         },
         {
           description: "Great technical problems solver",
         },
         {
           description:
-            "Experience coding mobile applications in Android Studio and XCode",
+            "Proficient coding mobile applications using Flutter/Dart",
+        },
+        {
+          description:
+            "Foundational knowledge and ability to troubleshoot mobile apps projects using native Android Studio and XCode",
         },
       ],
     },
@@ -116,7 +125,7 @@ function App() {
       id: 3,
       items: [
         {
-          description: "Inpixon",
+          description: "CxApp",
           location: "Toronto,ON",
           duration: "Sept 2020- Present",
           role: "Customer Success Engineer/Implementation",
@@ -225,34 +234,21 @@ function App() {
           description: "Flutter",
           imageUrl: "images/flutter.svg",
         },
+        {
+          description: "Dart",
+          imageUrl: "images/dart_logo.png",
+        },
       ],
     },
     { title: "Contact", id: 5 },
   ];
-  //console.log(optionState);
+
   const showOption = (id) => {
     setOption(id);
   };
 
   const optionShown = options.filter((option) => option.id === optionState);
-  //console.log(optionShown);
 
-  // return (
-  //   // <div className={classes.menuDiv}>
-  //   <div>
-  //     {/* <div> */}
-  //     <Menu
-  //       // className={classes.menu}
-  //       options={options}
-  //       optionSelected={showOption}
-  //       optionDisplayed={optionState}
-  //     ></Menu>
-  //     {/* <MainScreen
-  //       className={classes.mainScreen}
-  //       option={optionShown}
-  //     ></MainScreen> */}
-  //   </div>
-  // );
   return (
     <>
       <Menu

@@ -27,7 +27,7 @@ const Menu = (props) => {
         className="d-flex container ml-0 mr-0 p-2 justify-content-between"
         style={{ maxWidth: "100%" }}
       >
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" style={{ fontFamily: 'Montserrat'}} href="#">
           Daniel Seijas
         </a>
         <button

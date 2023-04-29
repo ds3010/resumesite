@@ -37,7 +37,7 @@ const MainScreen = (props) => {
       );
     });
     content = (
-      <div className="container mt-3">
+      <div className="container mt-3 pt-4">
         <ul className="list-group list-group-flush mb-5">{intContent}</ul>
       </div>
     );
@@ -57,7 +57,7 @@ const MainScreen = (props) => {
                 <div className="d-flex justify-content-center pt-2">
                   <img
                     src={item.imageUrl}
-                    className="img-fluid width-auto pb-2"
+                    className="img-fluid width-auto p-1"
                     style={{ maxHeight: "4rem" }}
                     alt=""
                   ></img>
@@ -69,7 +69,7 @@ const MainScreen = (props) => {
       );
     });
     content = (
-      <div className="container content-row">
+      <div className="container content-row p-4">
         <div className="row">
           {/* <div className="card-columns">{intContent}</div> */}
           {intContent}
@@ -101,44 +101,9 @@ const MainScreen = (props) => {
       if (item.imageUrl) {
         areThereImages = true;
       }
-      // PREVIOUS CSS CLASSES
-      // const liClasses = areThereDuties
-      //   ? classes.itemDivLi
-      //   : classes.itemDivLiSecond;
 
-      // const imgClasses = areThereImages
-      //   ? classes.itemHeaderWithImage
-      //   : classes.itemHeader;
-
-      //PREVIOUS RETURN
-      // return (
-      //   <div className={classes.itemDiv} key={index}>
-      //     <div className={classes.headerBox}>
-      //       {areThereImages && (
-      //         <img src={item.imageUrl} className={classes.image} alt=""></img>
-      //       )}
-      //       <ul className={imgClasses}>
-      //         <li className={liClasses}>{description}</li>
-      //         {duration !== "" && <li className={liClasses}>{duration}</li>}
-      //         {location !== "" && <li className={liClasses}>{location}</li>}
-      //         {role !== "" && <li className={liClasses}>{role}</li>}
-      //       </ul>
-      //     </div>
-      //     {item.duties && (
-      //       <ul className={classes.itemDivLiUl}>
-      //         {item.duties.map((duty, index) => {
-      //           return (
-      //             <li className={classes.itemDivLiUlLi} key={index}>
-      //               {duty}
-      //             </li>
-      //           );
-      //         })}
-      //       </ul>
-      //     )}
-      //   </div>
-      // );
       return (
-        <div className="container mb-2 mt-2" key={index}>
+        <div className="container mb-2 mt-2 p-4" key={index}>
           <div className="card">
             <div className="card-body p-0">
               <h5 className="card-header bg-light text-dark text-center">
@@ -206,10 +171,28 @@ const MainScreen = (props) => {
   // }, [props.option[0]]);
 
   return (
-    <div style={{ height: "100%", overflow: "scroll" }}>
-      <h1 className="text-center">{props.option[0].title}</h1>
+    <div style={{ height: "100%", overflow: "scroll",fontFamily: 'Montserrat', overflow: 'scroll' }}>
+      {props.option[0].titleImage ?
+        <div className="container h-30 pt-4 text-center">
+          <div className="row">
+            <div className="col-md-5">
+              <img
+                src={props.option[0].titleImage}
+                className="img-fluid width-auto pb-2 rounded-circle float-md-right"
+                style={{ maxHeight: "10rem" }}
+                alt=""
+              ></img>
+            </div>
+            <div className="col-md-7 align-self-center">
+              <h1 className="float-md-left">{props.option[0].title}</h1>
+            </div>
+          </div>
+        </div>
+      : <h1 className="text-center p-4">{props.option[0].title}</h1>}
+      
       {content}
     </div>
+
   );
 };
 

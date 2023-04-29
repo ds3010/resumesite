@@ -12,6 +12,7 @@ const MenuOptions = (props) => {
         data-toggle="collapse"
         data-target=".navbar-collapse.show"
         href="#"
+        style={{ fontFamily: 'Montserrat'}}
         onClick={onClicked}
       >
         {props.title}
