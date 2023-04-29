@@ -171,7 +171,7 @@ const MainScreen = (props) => {
   // }, [props.option[0]]);
 
   return (
-    <div style={{ height: "100%", overflow: "scroll",fontFamily: 'Montserrat',paddingBottom: '72px' }}>
+    <div style={{ height: "100%", overflow: "scroll",fontFamily: 'Montserrat',paddingBottom: '100px' }}>
       {props.option[0].titleImage ?
         <div className="container h-30 pt-4 text-center">
           <div className="row">
