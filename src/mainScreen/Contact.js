@@ -60,7 +60,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center pt-4">
         <form onSubmit={sendEmail}>
           <div className="form-group">
             <input

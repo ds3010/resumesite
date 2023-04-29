@@ -69,7 +69,7 @@ const MainScreen = (props) => {
       );
     });
     content = (
-      <div className="container content-row p-4">
+      <div className="container content-row pt-4">
         <div className="row">
           {/* <div className="card-columns">{intContent}</div> */}
           {intContent}
@@ -103,7 +103,7 @@ const MainScreen = (props) => {
       }
 
       return (
-        <div className="container mb-2 mt-2 p-4" key={index}>
+        <div className="container mb-2 mt-2 pt-4" key={index}>
           <div className="card">
             <div className="card-body p-0">
               <h5 className="card-header bg-light text-dark text-center">
@@ -178,7 +178,7 @@ const MainScreen = (props) => {
             <div className="col-md-5">
               <img
                 src={props.option[0].titleImage}
-                className="img-fluid width-auto pb-2 rounded-circle float-md-right"
+                className="img-fluid width-auto  rounded-circle float-md-right"
                 style={{ maxHeight: "10rem" }}
                 alt=""
               ></img>
@@ -188,7 +188,7 @@ const MainScreen = (props) => {
             </div>
           </div>
         </div>
-      : <h1 className="text-center p-4">{props.option[0].title}</h1>}
+      : <h1 className="text-center pt-4">{props.option[0].title}</h1>}
       
       {content}
     </div>
