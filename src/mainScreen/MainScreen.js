@@ -125,10 +125,12 @@ const MainScreen = (props) => {
                   <div id="edDetails" className="d-inline-block align-middle">
                     <ul className="list-group">
                       {duration !== "" && (
-                        <li className="list-group-item border-0">
-                          <span className="font-weight-bold ">Duration: </span>
-                          {duration}
-                        </li>
+                        <>
+                          <li className="list-group-item border-0">
+                            <span className="font-weight-bold ">Duration: </span>
+                            {duration}
+                          </li>
+                        </>
                       )}
                       {location !== "" && (
                         <li className="list-group-item border-0">
@@ -151,12 +153,15 @@ const MainScreen = (props) => {
                 <ul className="list-group ml-5">
                   {item.duties.map((duty, index) => {
                     return (
-                      <li
-                        className="list-group-item border-0 p-0 m-0"
-                        key={index}
-                      >
-                        {duty}
-                      </li>
+                      <>
+                      <hr id="division" className="m-0"></hr>
+                        <li
+                          className="list-group-item border-0 p-0 m-0"
+                          key={index}
+                        >
+                          {duty}
+                        </li>
+                      </>
                     );
                   })}
                 </ul>
@@ -175,18 +180,18 @@ const MainScreen = (props) => {
       {props.option[0].titleImage ?
         <div className="container h-30 pt-4 text-center">
           <div className="row">
-            <div className="col-md-5">
+            <div className="d-block col-12">
               <img
                 src={props.option[0].titleImage}
-                className="img-fluid width-auto  rounded-circle float-md-right"
+                className="img-fluid width-auto rounded-circle"
                 style={{ maxHeight: "10rem" }}
                 alt=""
               ></img>
             </div>
-            <div className="col-md-7 align-self-center">
-              <h1 className="float-md-left">{props.option[0].title}</h1>
+            <div className="d-block align-self-center col-12">
+              <h1>{props.option[0].title}</h1>
             </div>
-          </div>
+        </div>
         </div>
       : <h1 className="text-center pt-4">{props.option[0].title}</h1>}
       
