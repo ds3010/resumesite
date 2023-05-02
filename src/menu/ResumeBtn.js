@@ -11,7 +11,7 @@ const ResumBtn = () => {
       responseType: "blob",
     })
       .then((res) => {
-        console.log(res);
+        //console.log(res);
         FileDownload(res.data, "DanielSeijasResume.pdf");
       })
       .catch((error) => {
